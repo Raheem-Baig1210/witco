@@ -62,13 +62,13 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
-        a3s: {
-          green: "hsl(var(--a3s-green))",
-          "green-dark": "hsl(var(--a3s-green-dark))",
-          "green-light": "hsl(var(--a3s-green-light))",
-          dark: "hsl(var(--a3s-dark))",
-          gray: "hsl(var(--a3s-gray))",
-          "light-gray": "hsl(var(--a3s-light-gray))",
+        wic: {
+          green: "hsl(var(--wic-green))",
+          "green-dark": "hsl(var(--wic-green-dark))",
+          "green-light": "hsl(var(--wic-green-light))",
+          dark: "hsl(var(--wic-dark))",
+          gray: "hsl(var(--wic-gray))",
+          "light-gray": "hsl(var(--wic-light-gray))",
         },
       },
       fontFamily: {

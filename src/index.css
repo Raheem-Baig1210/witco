@@ -15,7 +15,7 @@
     --popover: 0 0% 100%;
     --popover-foreground: 220 15% 20%;
 
-    /* A3S Green - Primary brand color */
+    /* WIC Green - Primary brand color */
     --primary: 142 76% 36%;
     --primary-foreground: 0 0% 100%;
 
@@ -38,13 +38,13 @@
 
     --radius: 0.5rem;
 
-    /* Custom A3S colors */
-    --a3s-green: 142 76% 36%;
-    --a3s-green-dark: 142 76% 28%;
-    --a3s-green-light: 142 60% 50%;
-    --a3s-dark: 220 20% 18%;
-    --a3s-gray: 220 9% 46%;
-    --a3s-light-gray: 220 14% 96%;
+    /* Custom WIC colors */
+    --wic-green: 142 76% 36%;
+    --wic-green-dark: 142 76% 28%;
+    --wic-green-light: 142 60% 50%;
+    --wic-dark: 220 20% 18%;
+    --wic-gray: 220 9% 46%;
+    --wic-light-gray: 220 14% 96%;
 
     /* Sidebar */
     --sidebar-background: 0 0% 98%;
@@ -129,7 +129,7 @@
   }
 
   .gradient-green {
-    background: linear-gradient(135deg, hsl(var(--a3s-green)) 0%, hsl(var(--a3s-green-dark)) 100%);
+    background: linear-gradient(135deg, hsl(var(--wic-green)) 0%, hsl(var(--wic-green-dark)) 100%);
   }
 
   .text-gradient-green {

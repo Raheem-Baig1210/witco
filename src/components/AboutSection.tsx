@@ -15,7 +15,7 @@ const features = [
   {
     icon: Users,
     title: "Corporate Citizenship",
-    description: "A3S Solutions Limited supports the various National Oil Companies (NOC's) local and international Engineering Procurement Companies (EPC's).",
+    description: "World Integrated Trading Contracting Company (WITCO) Limited supports the various National Oil Companies (NOC's) local and international Engineering Procurement Companies (EPC's).",
   },
   {
     icon: Handshake,
@@ -37,13 +37,14 @@ export const AboutSection = () => {
             transition={{ duration: 0.6 }}
           >
             <h2 className="section-title mb-2">
-              Welcome to <span className="text-primary">A3S Solutions</span> Limited
+      
+              <span className="text-primary"> Welcome to Al-Mutakamilah Al-Alamiyyah Al-maqawalat Al-ammah (World Intgerated Trading & Contracting Co.) WITCO.</span> Limited
             </h2>
             <p className="text-muted-foreground italic mb-6">
               ( Formally Known As Shore Waves Trading LLC )
             </p>
             <p className="text-foreground/80 leading-relaxed">
-              A3S Solutions Limited is a progressive and efficient trading and contracting company. 
+              World Intgerated Trading & Contracting Co.WITCO. Limited is a progressive and efficient trading and contracting company. 
               With a solid reputation, quality products have always been delivered to our customers on time.
             </p>
           </motion.div>

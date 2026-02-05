@@ -7,16 +7,21 @@ export const Footer = () => {
         <div className="grid md:grid-cols-3 gap-8 items-center">
           {/* Logo */}
           <div>
-            <a href="#" className="flex items-center gap-2">
-              <div className="flex flex-col items-center">
-                <span className="text-3xl font-bold text-secondary-foreground">
-                  a<span className="text-primary">3</span>s
+            <a href="#" className="flex items-center gap-3">
+              <img
+                src="/images/wic-logo.png.jpeg"
+                alt="World Integrated Trading Contracting Company logo"
+                className="h-20 w-auto"
+              />
+              <div className="flex flex-col">
+                <span className="text-2xl font-bold text-secondary-foreground">WITCO</span>
+                <span className="text-xs text-primary font-medium tracking-wider uppercase">
+                  World Integrated Trading Contracting Company
                 </span>
-                <span className="text-xs text-primary font-medium tracking-wider uppercase">Solutions</span>
               </div>
             </a>
             <p className="mt-4 text-secondary-foreground/70 text-sm">
-              A3S Solutions Limited is a progressive and efficient trading and contracting company.
+              World Integrated Trading Contracting Company (WITCO) Limited is a progressive and efficient trading and contracting company.
             </p>
           </div>
 
@@ -47,7 +52,7 @@ export const Footer = () => {
           <div className="text-right">
             <h3 className="text-lg font-semibold text-secondary-foreground mb-4">Contact Info</h3>
             <div className="space-y-2 text-sm text-secondary-foreground/70">
-              <p>inayath.khan@a3ssolution.com</p>
+              <p>inayath.khan@WITCO.com</p>
               <p>0044 (0) 7832285692</p>
             </div>
           </div>
@@ -55,7 +60,7 @@ export const Footer = () => {
 
         <div className="mt-8 pt-8 border-t border-secondary-foreground/10 text-center">
           <p className="text-secondary-foreground/50 text-sm">
-            © {new Date().getFullYear()} A3S Solutions Limited. All rights reserved.
+            © {new Date().getFullYear()} World Integrated Trading Contracting Company (WITCO) Limited. All rights reserved.
           </p>
         </div>
       </div>

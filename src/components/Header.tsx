@@ -47,10 +47,16 @@ export const Header = () => {
         <div className="container-main py-3">
           <div className="flex items-center justify-between">
             {/* Logo */}
-            <a href="#" className="flex items-center gap-2">
-              <div className="flex flex-col items-center">
-                <span className="text-2xl font-bold text-secondary">
-                  a<span className="text-primary">3</span>s
+            <a href="#" className="flex items-center gap-3">
+              <img
+                src="/images/wic-logo.png.jpeg"
+                alt="World Integrated Trading Contracting Company logo"
+                className="h-10 w-auto"
+              />
+              <div className="flex flex-col">
+                <span className="text-xl font-bold text-secondary">WITCO</span>
+                <span className="text-[10px] text-primary font-medium tracking-wider uppercase">
+                  World Integrated Contracting Company
                 </span>
                 <span className="text-[10px] text-primary font-medium tracking-wider uppercase">Solutions</span>
               </div>

@@ -11,7 +11,7 @@ export const FloatingButtons = () => {
         <Phone className="w-5 h-5" />
       </a>
       <a
-        href="https://api.whatsapp.com/send?phone=00971526111172&text=Hi,%20A3S%20Solutions%20Limited"
+        href="https://api.whatsapp.com/send?phone=00971526111172&text=Hi,%20World%20Integrated%20Contracting%20Company%20(WITCO)%20Limited"
         target="_blank"
         rel="noopener noreferrer"
         className="w-12 h-12 bg-primary hover:bg-primary/90 text-primary-foreground rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition-transform"

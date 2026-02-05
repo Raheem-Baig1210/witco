@@ -49,7 +49,7 @@ export const ISOSection = () => {
             We Are <span className="text-primary">ISO Certified</span> Company
           </h2>
           <p className="text-secondary-foreground/70 max-w-2xl mx-auto">
-            We at A3S Solutions are proud to be an ISO9001 certified company with dedicated 
+            We at World Integrated Trading Contracting Company (WITCO) are proud to be an ISO9001 certified company with dedicated 
             professionals serving your needs worldwide.
           </p>
         </motion.div>
