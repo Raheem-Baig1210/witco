@@ -4,28 +4,32 @@ import { Button } from "./ui/button";
 import { motion, AnimatePresence } from "framer-motion";
 
 const navItems = [
-  { name: "Home", href: "#" },
+  { name: "Home", href: "#home" },
   { name: "About us", href: "#about" },
   { 
     name: "Products", 
     href: "#products",
     dropdown: [
-      "Batteries",
-      "Battery Racks",
-      "Fiber Glass Enclosures",
-      "Accessories",
-      "Solar Power System",
-      "Chargers/Rectifiers",
-      "UPS Systems",
-      "Invertors"
+      { label: "Batteries", href: "#products" },
+      { label: "Battery Racks", href: "#products" },
+      { label: "Fiber Glass Enclosures", href: "#products" },
+      { label: "Accessories", href: "#products" },
+      { label: "Solar Power System", href: "#products" },
+      { label: "Chargers/Rectifiers", href: "#products" },
+      { label: "UPS Systems", href: "#products" },
+      { label: "Invertors", href: "#products" }
     ]
   },
   { 
     name: "Support & Service", 
-    href: "#",
-    dropdown: ["Installation", "Maintenance", "Technical Support"]
+    href: "#support-services",
+    dropdown: [
+      { label: "Installation", href: "#installation" },
+      { label: "Maintenance", href: "#maintenance" },
+      { label: "Technical Support", href: "#technical-support" }
+    ]
   },
-  { name: "Technical", href: "#" },
+  { name: "Technical", href: "#technical" },
   { name: "Contact us", href: "#contact" },
 ];
 
@@ -41,24 +45,23 @@ export const Header = () => {
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
 
   return (
-    <header className="w-full sticky top-0 z-50">
+    <header className="w-full sticky top-0 z-50 shadow-sm">
       {/* Top Bar */}
-      <div className="bg-background border-b border-border">
+      <div className="bg-background/95 backdrop-blur border-b border-border">
         <div className="container-main py-3">
           <div className="flex items-center justify-between">
             {/* Logo */}
-            <a href="#" className="flex items-center gap-3">
+            <a href="#" className="flex items-center gap-4">
               <img
                 src="/images/wic-logo.png.jpeg"
                 alt="World Integrated Trading Contracting Company logo"
-                className="h-10 w-auto"
+                className="h-24 w-auto"
               />
               <div className="flex flex-col">
                 <span className="text-xl font-bold text-secondary">WITCO</span>
                 <span className="text-[10px] text-primary font-medium tracking-wider uppercase">
-                  World Integrated Contracting Company
+                  WORLD INTEGRATED TRADING & CONTRACTING COMPANY
                 </span>
-                <span className="text-[10px] text-primary font-medium tracking-wider uppercase">Solutions</span>
               </div>
             </a>
 
@@ -79,7 +82,7 @@ export const Header = () => {
                   <Mail className="w-5 h-5 text-primary" />
                 </div>
                 <div>
-                  <p className="text-sm font-semibold text-foreground">inayath.khan@a3ssolution.com</p>
+                  <p className="text-sm font-semibold text-foreground">inayath.khan@witco.com</p>
                   <p className="text-xs text-primary">Email</p>
                 </div>
               </div>
@@ -89,7 +92,7 @@ export const Header = () => {
       </div>
 
       {/* Navigation Bar */}
-      <nav className="bg-secondary">
+      <nav className="bg-secondary/95 backdrop-blur border-b border-secondary-foreground/10">
         <div className="container-main">
           <div className="flex items-center justify-between h-16">
             {/* Desktop Navigation */}
@@ -121,11 +124,11 @@ export const Header = () => {
                         >
                           {item.dropdown.map((subItem) => (
                             <a
-                              key={subItem}
-                              href="#products"
+                              key={subItem.label}
+                              href={subItem.href}
                               className="block px-4 py-2 text-sm text-foreground hover:bg-primary hover:text-primary-foreground transition-colors"
                             >
-                              {subItem}
+                              {subItem.label}
                             </a>
                           ))}
                         </motion.div>

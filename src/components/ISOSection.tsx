@@ -36,7 +36,8 @@ const values = [
 
 export const ISOSection = () => {
   return (
-    <section className="py-20 bg-secondary">
+    <section className="py-20 bg-secondary relative overflow-hidden">
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(34,197,94,0.18),transparent_45%)]" />
       <div className="container-main">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -45,6 +46,7 @@ export const ISOSection = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
+          <span className="section-kicker mb-3 inline-flex text-primary-foreground/80">Compliance & Quality</span>
           <h2 className="text-3xl md:text-4xl font-bold text-secondary-foreground mb-4">
             We Are <span className="text-primary">ISO Certified</span> Company
           </h2>
@@ -62,9 +64,11 @@ export const ISOSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: index * 0.1 }}
-              className="group bg-secondary-foreground/5 rounded-lg p-6 hover:bg-primary transition-all duration-300"
+              className="group rounded-2xl border border-secondary-foreground/10 bg-secondary-foreground/5 p-6 transition-all duration-300 hover:-translate-y-1 hover:bg-primary"
             >
-              <value.icon className="w-12 h-12 text-primary group-hover:text-primary-foreground mb-4 transition-colors" />
+              <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-4 transition-colors group-hover:bg-primary-foreground/10">
+                <value.icon className="w-6 h-6 text-primary group-hover:text-primary-foreground transition-colors" />
+              </div>
               <h3 className="font-semibold text-secondary-foreground group-hover:text-primary-foreground mb-2 transition-colors">
                 {value.title}
               </h3>

@@ -25,31 +25,44 @@ const features = [
 ];
 
 export const AboutSection = () => {
+  const highlights = [
+    { label: "Projects Delivered", value: "250+" },
+    { label: "Skilled Engineers", value: "60+" },
+    { label: "Countries Served", value: "12" },
+    { label: "Support Coverage", value: "24/7" },
+  ];
+
   return (
     <section id="about" className="py-20 bg-background">
       <div className="container-main">
         <div className="grid lg:grid-cols-2 gap-12 items-start">
-          {/* Left Content */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="section-title mb-2">
-      
-              <span className="text-primary"> Welcome to Al-Mutakamilah Al-Alamiyyah Al-maqawalat Al-ammah (World Intgerated Trading & Contracting Co.) WITCO.</span> Limited
+            <span className="section-kicker mb-4 inline-flex">About WITCO</span>
+            <h2 className="section-title mb-4">
+              World Integrated Trading &amp; Contracting Company
             </h2>
             <p className="text-muted-foreground italic mb-6">
               ( Formally Known As Shore Waves Trading LLC )
             </p>
-            <p className="text-foreground/80 leading-relaxed">
-              World Intgerated Trading & Contracting Co.WITCO. Limited is a progressive and efficient trading and contracting company. 
-              With a solid reputation, quality products have always been delivered to our customers on time.
+            <p className="text-foreground/80 leading-relaxed mb-8">
+              World Integrated Trading &amp; Contracting Co. (WITCO) Limited is a progressive and efficient trading and contracting company.
+              With a solid reputation, quality products are delivered on time with consistent, dependable service.
             </p>
+            <div className="grid grid-cols-2 gap-4">
+              {highlights.map((item) => (
+                <div key={item.label} className="rounded-xl border border-border bg-muted/60 px-4 py-4">
+                  <p className="text-xl font-semibold text-secondary">{item.value}</p>
+                  <p className="text-xs uppercase tracking-wider text-muted-foreground">{item.label}</p>
+                </div>
+              ))}
+            </div>
           </motion.div>
 
-          {/* Right Features Grid */}
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -64,13 +77,15 @@ export const AboutSection = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: index * 0.1 }}
-                className="group p-6 bg-muted rounded-lg hover:bg-primary transition-all duration-300"
+                className="group p-6 bg-card rounded-xl border border-border shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
               >
-                <feature.icon className="w-10 h-10 text-primary group-hover:text-primary-foreground mb-4 transition-colors" />
-                <h3 className="font-semibold text-foreground group-hover:text-primary-foreground mb-2 transition-colors">
+                <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-4 transition-colors group-hover:bg-primary">
+                  <feature.icon className="w-6 h-6 text-primary group-hover:text-primary-foreground transition-colors" />
+                </div>
+                <h3 className="font-semibold text-foreground mb-2 transition-colors group-hover:text-primary">
                   {feature.title}
                 </h3>
-                <p className="text-sm text-muted-foreground group-hover:text-primary-foreground/80 transition-colors">
+                <p className="text-sm text-muted-foreground">
                   {feature.description}
                 </p>
               </motion.div>

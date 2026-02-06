@@ -3,22 +3,22 @@ import { Sun, Zap } from "lucide-react";
 
 export const SolarSection = () => {
   return (
-    <section className="py-20 bg-muted">
+    <section className="py-20 bg-muted/60">
       <div className="container-main">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Left Content */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
+            <span className="section-kicker mb-3 inline-flex">Renewable Systems</span>
             <h2 className="section-title mb-8">
               Why <span className="text-primary">Solar Energy</span> is Best
             </h2>
 
             <div className="space-y-6">
-              <div className="flex gap-4">
+              <div className="flex gap-4 rounded-2xl border border-border bg-background/70 p-5">
                 <div className="flex-shrink-0 w-14 h-14 rounded-full bg-primary flex items-center justify-center">
                   <Sun className="w-7 h-7 text-primary-foreground" />
                 </div>
@@ -30,7 +30,7 @@ export const SolarSection = () => {
                 </div>
               </div>
 
-              <div className="flex gap-4">
+              <div className="flex gap-4 rounded-2xl border border-border bg-background/70 p-5">
                 <div className="flex-shrink-0 w-14 h-14 rounded-full bg-primary flex items-center justify-center">
                   <Zap className="w-7 h-7 text-primary-foreground" />
                 </div>
@@ -45,7 +45,6 @@ export const SolarSection = () => {
             </div>
           </motion.div>
 
-          {/* Right Image */}
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -56,8 +55,12 @@ export const SolarSection = () => {
             <img
               src="/images/solar-section.png"
               alt="Solar Energy"
-              className="w-full h-auto rounded-lg shadow-xl"
+              className="w-full h-auto rounded-2xl soft-shadow"
             />
+            <div className="absolute -bottom-6 right-6 rounded-2xl border border-border bg-background/90 px-6 py-4 shadow-lg">
+              <p className="text-sm font-semibold text-secondary">Efficiency Boost</p>
+              <p className="text-2xl font-bold text-primary">40%+</p>
+            </div>
           </motion.div>
         </div>
       </div>

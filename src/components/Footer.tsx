@@ -7,16 +7,16 @@ export const Footer = () => {
         <div className="grid md:grid-cols-3 gap-8 items-center">
           {/* Logo */}
           <div>
-            <a href="#" className="flex items-center gap-3">
+            <a href="#" className="flex items-center gap-4">
               <img
                 src="/images/wic-logo.png.jpeg"
                 alt="World Integrated Trading Contracting Company logo"
-                className="h-20 w-auto"
+                className="h-24 w-auto"
               />
               <div className="flex flex-col">
                 <span className="text-2xl font-bold text-secondary-foreground">WITCO</span>
                 <span className="text-xs text-primary font-medium tracking-wider uppercase">
-                  World Integrated Trading Contracting Company
+                  WORLD INTEGRATED TRADING & CONTRACTING COMPANY
                 </span>
               </div>
             </a>
