@@ -38,12 +38,12 @@ export const NewsSection = () => {
   useEffect(() => {
     const loadNews = async () => {
       try {
-        const response = await fetch("/api/news");
-        if (!response.ok) return;
-        const data = await response.json();
-        if (Array.isArray(data) && data.length > 0) {
-          setNews(data);
-        }
+        // const response = await fetch("/api/news");
+        // if (!response.ok) return;
+        // const data = await response.json();
+        // if (Array.isArray(data) && data.length > 0) {
+        //   setNews(data);
+        // }
       } catch {
         return;
       }

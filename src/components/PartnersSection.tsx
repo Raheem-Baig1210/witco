@@ -16,17 +16,17 @@ export const PartnersSection = () => {
   useEffect(() => {
     const loadPartners = async () => {
       try {
-        const response = await fetch("/api/partners");
-        if (!response.ok) return;
-        const data = await response.json();
-        if (Array.isArray(data) && data.length > 0) {
-          const images = data
-            .map((item) => item?.image)
-            .filter((image) => typeof image === "string");
-          if (images.length > 0) {
-            setPartners(images);
-          }
-        }
+        // const response = await fetch("/api/partners");
+        // if (!response.ok) return;
+        // const data = await response.json();
+        // if (Array.isArray(data) && data.length > 0) {
+        //   const images = data
+        //     .map((item) => item?.image)
+        //     .filter((image) => typeof image === "string");
+        //   if (images.length > 0) {
+        //     setPartners(images);
+        //   }
+        // }
       } catch {
         return;
       }

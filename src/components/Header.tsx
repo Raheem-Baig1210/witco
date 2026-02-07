@@ -25,12 +25,14 @@ const navItems = [
     name: "Support & Service", 
     href: "#support-services",
     dropdown: [
-      { label: "Installation", href: "#installation" },
-      { label: "Maintenance", href: "#maintenance" },
-      { label: "Technical Support", href: "#technical-support" }
+      { label: "Installation and Supervision ", href: "/support/installation" },
+      { label: "Testing and Commissioning ", href: "/support/testing" },
+      { label: "Spare parts Management ", href: "/support/spareparts" },
+      { label: "Customer Training ", href: "/support/training" },
+      { label: "Site Visit / As-Builts", href: "/support/sitevisit" }
     ]
   },
-  { name: "Technical", href: "#technical" },
+  // { name: "Technical", href: "#technical" },
   { name: "Contact us", href: "/contact" },
 ];
 

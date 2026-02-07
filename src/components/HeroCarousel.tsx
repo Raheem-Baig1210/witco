@@ -31,13 +31,13 @@ export const HeroCarousel = () => {
   useEffect(() => {
     const loadSlides = async () => {
       try {
-        const response = await fetch("/api/hero-slides");
-        if (!response.ok) return;
-        const data = await response.json();
-        if (Array.isArray(data) && data.length > 0) {
-          setSlides(data);
-        }
-      } catch {
+        // const response = await fetch("/api/hero-slides");
+        // if (!response.ok) return;
+        // const data = await response.json();
+        // if (Array.isArray(data) && data.length > 0) {
+        //   setSlides(data);
+        // }
+      } catch (error) {
         return;
       }
     };

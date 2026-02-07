@@ -200,6 +200,10 @@ export const ContactUs = () => {
                     <option value="UPS Systems">UPS Systems</option>
                     <option value="Solar Solutions">Solar Solutions</option>
                     <option value="Technical Support">Technical Support</option>
+                    <option value="Installation & Supervision">Installation & Supervision</option>
+                    <option value="Spare Parts Management">Spare Parts Management</option>
+                    <option value="Customer Training">Customer Training</option>
+                    <option value="Site Visit / As-Builts">Site Visit / As-Builts</option>
                     <option value="Other">Other (Please Specify)</option>
                   </select>
                   <ChevronDown className="absolute right-4 top-1/2 -translate-y-1/2 text-primary pointer-events-none" size={18} />

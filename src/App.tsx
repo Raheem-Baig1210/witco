@@ -15,6 +15,7 @@ import { Header } from "./components/Header";
 import { Footer } from "./components/Footer"; 
 // import { i } from "node_modules/vite/dist/node/types.d-aGj9QkWt";
 import { ContactUs } from "./components/ContactUs";
+import { SupportDetails } from "./components/supportDetails";
 
 const queryClient = new QueryClient();
 
@@ -23,7 +24,10 @@ const App = () => (
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      <BrowserRouter>
+      <BrowserRouter future={{ 
+    v7_startTransition: true, 
+    v7_relativeSplatPath: true 
+  }}>
         {/* Header stays outside Routes so it never unmounts */}
         <Header />
         
@@ -32,6 +36,7 @@ const App = () => (
             <Route path="/" element={<Index />} />
             <Route path="/about" element={<AboutPage />} /> 
             <Route path="/product/:id" element={<ProductDetails />} />
+            <Route path="/support/:id" element={<SupportDetails />} />
             <Route path="/contact" element={<ContactUs />} />
             <Route path="*" element={<NotFound />} />
           </Routes>

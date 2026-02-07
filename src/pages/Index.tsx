@@ -51,12 +51,12 @@ const Index = () => {
   useEffect(() => {
     const loadSupportServices = async () => {
       try {
-        const response = await fetch("/api/support-services");
-        if (!response.ok) return;
-        const data = await response.json();
-        if (Array.isArray(data) && data.length > 0) {
-          setSupportServices(data);
-        }
+        // const response = await fetch("/api/support-services");
+        // if (!response.ok) return;
+        // const data = await response.json();
+        // if (Array.isArray(data) && data.length > 0) {
+        //   setSupportServices(data);
+        // }
       } catch {
         return;
       }
@@ -64,12 +64,12 @@ const Index = () => {
 
     const loadTechnicalItems = async () => {
       try {
-        const response = await fetch("/api/technical");
-        if (!response.ok) return;
-        const data = await response.json();
-        if (Array.isArray(data) && data.length > 0) {
-          setTechnicalItems(data);
-        }
+        // const response = await fetch("/api/technical");
+        // if (!response.ok) return;
+        // const data = await response.json();
+        // if (Array.isArray(data) && data.length > 0) {
+        //   setTechnicalItems(data);
+        // }
       } catch {
         return;
       }

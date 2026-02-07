@@ -1,7 +1,7 @@
 import { useParams, Link } from "react-router-dom";
 import { ArrowLeft, CheckCircle2, Zap, ShieldCheck, Cog, Download } from "lucide-react";
 import { Button } from "./ui/button";
-
+import { useNavigate } from "react-router-dom";
 // --- TYPES ---
 interface ProductInfo {
   title: string;
@@ -84,6 +84,17 @@ export const ProductDetails = () => {
   const { id } = useParams<{ id: string }>();
   const product = id ? productDetailsData[id] : null;
 
+  const navigate = useNavigate(); // Initialize navigate
+
+  const handleRequest = () => {
+    // We pass the service title in the 'state' object
+    navigate('/contact');
+  };
+
+  if (!product) {
+    // ... return error state ...
+  }
+
   // Error handling if product ID is invalid
   if (!product) {
     return (
@@ -113,7 +124,7 @@ export const ProductDetails = () => {
                 {product.title}
               </h1>
             </div>
-            <Button size="lg" className="rounded-full font-bold shadow-xl hover:scale-105 transition-transform bg-primary text-white">
+            <Button onClick={handleRequest} size="lg" className="rounded-full font-bold shadow-xl hover:scale-105 transition-transform bg-primary text-white">
               Contact Sales
             </Button>
           </div>
