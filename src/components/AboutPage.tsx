@@ -1,5 +1,16 @@
 import React, { useState, useEffect } from 'react';
-import { Zap, Repeat, Award, Target, ChevronRight } from 'lucide-react';
+import { 
+  Zap, 
+  Repeat, 
+  Award, 
+  Target, 
+  ChevronRight, 
+  MapPin, 
+  Mail, 
+  Phone, 
+  UserCircle,
+  ExternalLink 
+} from 'lucide-react';
 
 const AboutPage: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -34,10 +45,7 @@ const AboutPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-white font-sans selection:bg-[#00a859] selection:text-white">
       
-      {/* 1. HEADER PADDING (The Fix)
-          This div creates empty space so the "Strategic Presence" section 
-          starts AFTER the fixed headers. 152px is the height of your full header.
-      */}
+      {/* 1. HEADER PADDING */}
       <div className="h-[152px] w-full" />
 
       {/* SECONDARY NAV BAR */}
@@ -52,12 +60,13 @@ const AboutPage: React.FC = () => {
             <li><a href="#company-profile" className="hover:text-[#00a859] transition-all hover:tracking-[0.3em]">Company Profile</a></li>
             <li><a href="#history" className="hover:text-[#00a859] transition-all hover:tracking-[0.3em]">History</a></li>
             <li><a href="#customers" className="hover:text-[#00a859] transition-all hover:tracking-[0.3em]">Our Customers</a></li>
+            <li><a href="#team" className="hover:text-[#00a859] transition-all hover:tracking-[0.3em]">Our Team</a></li>
+            <li><a href="#location" className="hover:text-[#00a859] transition-all hover:tracking-[0.3em]">Our Location</a></li>
           </ul>
         </div>
       </nav>
 
       {/* SECTION: WHERE WE ARE */}
-      {/* scroll-mt-40 ensures that when you click the link, it doesn't hide behind the bars */}
       <section id="where-we-are" className="py-24 max-w-7xl mx-auto px-6 scroll-mt-40">
         <div className="flex flex-col md:flex-row items-end justify-between mb-16 gap-4">
           <div className="max-w-2xl">
@@ -107,7 +116,6 @@ const AboutPage: React.FC = () => {
           </div>
         </div>
 
-        {/* Requirements Grid */}
         <div className="mt-32 bg-[#152332] rounded-[2.5rem] p-12 md:p-16 text-white overflow-hidden relative shadow-2xl">
           <div className="absolute top-0 right-0 w-64 h-64 bg-[#00a859] opacity-10 rounded-full -mr-32 -mt-32"></div>
           <h3 className="text-2xl font-bold text-center mb-12 relative z-10 uppercase tracking-[0.3em] text-[#00a859]">Core Value Delivery</h3>
@@ -194,7 +202,7 @@ const AboutPage: React.FC = () => {
           </div>
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6">
             {customerImages.map((img, index) => (
-              <div key={index} className="bg-white p-6 rounded-xl flex items-center justify-center h-32 border border-white/5 shadow-inner">
+              <div key={index} className="bg-white p-6 rounded-xl flex items-center justify-center h-32 border border-white/5 shadow-inner hover:scale-105 transition-transform duration-300">
                 <img 
                   src={`${imageFolder}${img}`} 
                   alt="Partner Logo" 
@@ -206,6 +214,120 @@ const AboutPage: React.FC = () => {
         </div>
       </section>
 
+      {/* SECTION: OUR TEAM */}
+      <section id="team" className="py-24 max-w-7xl mx-auto px-6 scroll-mt-40">
+        <div className="flex flex-col md:flex-row items-end justify-between mb-16 gap-4">
+          <div className="max-w-2xl">
+            <h2 className="text-[#152332] text-4xl md:text-5xl font-extrabold tracking-tight mb-4 uppercase">Expert Leadership</h2>
+            <p className="text-gray-500 text-lg">Specialized engineers and directors driving global energy solutions.</p>
+          </div>
+          <div className="h-1 w-24 bg-[#00a859]"></div>
+        </div>
+
+        <div className="space-y-12">
+          {/* Executive Leadership */}
+          <div className="bg-[#152332] rounded-[2.5rem] p-8 md:p-12 text-white shadow-2xl relative overflow-hidden group">
+            <div className="absolute top-0 right-0 w-32 h-32 bg-[#00a859] opacity-20 rounded-bl-full transition-all group-hover:w-40 group-hover:h-40"></div>
+            <div className="flex flex-col md:flex-row gap-8 items-center relative z-10">
+              <div className="w-24 h-24 bg-[#00a859] rounded-full flex items-center justify-center shrink-0">
+                <UserCircle size={56} className="text-white" />
+              </div>
+              <div className="text-center md:text-left">
+                <h3 className="text-3xl font-black uppercase tracking-tight">M. Inayath Khan</h3>
+                <p className="text-[#00a859] font-bold tracking-[0.2em] uppercase text-xs mb-4">Director of A3S Solutions Limited</p>
+                <div className="flex flex-wrap justify-center md:justify-start gap-6 text-sm">
+                  <a href="tel:00447832285692" className="flex items-center gap-2 hover:text-[#00a859] transition-colors"><Phone size={16}/> 0044 (0) 78322 85692</a>
+                  <a href="mailto:inayath.khan@a3ssolution.com" className="flex items-center gap-2 hover:text-[#00a859] transition-colors"><Mail size={16}/> inayath.khan@a3ssolution.com</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            {/* Sales Team */}
+            <div className="space-y-6">
+              <h4 className="text-xs font-black uppercase tracking-[0.3em] text-[#00a859] border-b border-gray-100 pb-2">Sales Team</h4>
+              <div className="bg-white p-6 rounded-2xl shadow-xl border-l-4 border-[#152332] hover:border-[#00a859] transition-all">
+                <p className="font-bold text-[#152332] uppercase text-sm">Mohammed Ashar Riyan Khan</p>
+                <div className="mt-4 space-y-2 text-[11px] text-gray-500">
+                  <p className="flex items-center gap-2"><Phone size={14} className="text-[#00a859]"/> 00971 (0) 564774307</p>
+                  <p className="flex items-center gap-2"><Mail size={14} className="text-[#00a859]"/> ashar.khan@a3ssolution.com</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Project & Execution Team */}
+            <div className="space-y-6 lg:col-span-2">
+              <h4 className="text-xs font-black uppercase tracking-[0.3em] text-[#00a859] border-b border-gray-100 pb-2">Project & Execution</h4>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                {[
+                  { name: "Aamer Khan", tel: "+966 55007 3626", mail: "aamer.khan@a3ssolution.com" },
+                  { name: "Mohammed Waseem Khan", tel: "+966 532207019", mail: "logistics@a3ssolution.com" },
+                  { name: "Afroz Samee", tel: "+966 565404787", mail: "afroz.samee@a3ssolution.com" },
+                  { name: "Syed Faisal", tel: "+966 532 789 427", mail: "services@a3ssolution.com" }
+                ].map((member) => (
+                  <div key={member.name} className="bg-gray-50 p-5 rounded-xl hover:bg-white hover:shadow-lg transition-all group border border-transparent hover:border-gray-100">
+                    <p className="font-bold text-[#152332] text-xs uppercase group-hover:text-[#00a859]">{member.name}</p>
+                    <p className="text-[10px] text-gray-500 mt-2 font-medium">{member.tel}</p>
+                    <p className="text-[10px] text-gray-400">{member.mail}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Service Team */}
+            <div className="space-y-6 lg:col-span-3 mt-4">
+              <h4 className="text-xs font-black uppercase tracking-[0.3em] text-[#00a859] border-b border-gray-100 pb-2">Service Team</h4>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                {[
+                  { name: "M. Akhib Ahmed", tel: "00966 551483658", mail: "akhib.ahmed@a3ssolution.com" },
+                  { name: "Muhammed Shahabaz", mail: "m.shahabaz@a3ssolution.com" },
+                  { name: "Mohammed Shahabaz Ali", mail: "shahabaz.ali@a3ssolution.com" }
+                ].map((member) => (
+                  <div key={member.name} className="border border-gray-100 p-5 rounded-xl bg-white shadow-sm hover:shadow-md transition-shadow">
+                    <p className="font-bold text-[#152332] text-xs uppercase">{member.name}</p>
+                    {member.tel && <p className="text-[10px] text-gray-500 mt-1 font-medium">{member.tel}</p>}
+                    <p className="text-[10px] text-[#00a859] mt-1 break-all">{member.mail}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* SECTION: OUR LOCATIONS */}
+      <section id="location" className="py-24 bg-[#f8fafc] scroll-mt-40">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-[#152332] text-4xl font-black uppercase italic tracking-tighter">Global Footprint</h2>
+            <div className="h-1 w-20 bg-[#00a859] mx-auto mt-4"></div>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {/* Abu Dhabi */}
+            <div className="bg-white rounded-3xl p-8 shadow-2xl border-t-8 border-[#00a859] flex flex-col justify-between hover:-translate-y-2 transition-transform duration-300">
+              <div>
+                <span className="bg-[#152332] text-white text-[10px] font-black px-3 py-1 rounded-full uppercase tracking-widest mb-6 inline-block">Head Office</span>
+                <h3 className="text-xl font-bold text-[#152332] mb-4">Abu Dhabi, UAE</h3>
+                <p className="text-gray-500 text-sm leading-relaxed mb-6">
+                  P.O. Box : 927, Hamdan St. Crystal Tower Office 101
+                </p>
+              </div>
+              <div className="space-y-4 pt-6 border-t border-gray-100">
+                <a href="tel:00447832285692" className="flex items-center gap-3 text-sm font-bold text-[#152332] hover:text-[#00a859] transition-colors">
+                  <Phone size={16} className="text-[#00a859]" /> 0044 (0) 7832285692
+                </a>
+                <button className="w-full bg-[#152332] text-white py-3 rounded-xl flex items-center justify-center gap-2 hover:bg-[#00a859] transition-all font-bold text-xs uppercase tracking-widest">
+                  <MapPin size={14} /> Click to Map
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* FOOTER */}
       <footer className="bg-[#152332] border-t border-white/5 py-16 text-center">
         <p className="text-white/40 text-[10px] font-bold tracking-[0.5em] uppercase">&copy; 2026 A3S Solutions Limited | Industrial Excellence</p>
       </footer>
