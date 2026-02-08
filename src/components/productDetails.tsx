@@ -197,11 +197,11 @@ export const ProductDetails = () => {
               </div>
             </section>
 
-            <div className="flex flex-col sm:flex-row gap-4 pt-4">
+            {/* <div className="flex flex-col sm:flex-row gap-4 pt-4">
                <Button onClick={handleRequest} className="h-16 px-10 rounded-full font-black uppercase tracking-widest text-xs flex-1">
                   Enquire for Details
                </Button>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
