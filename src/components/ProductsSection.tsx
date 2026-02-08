@@ -150,11 +150,11 @@ export const ProductsSection = () => {
       </div>
 
       {/* Footer Button */}
-      <div className="text-center mt-20">
+      {/* <div className="text-center mt-20">
         <Button variant="outline" size="lg" className="rounded-full px-12 border-2 hover:bg-primary hover:text-white transition-all font-bold uppercase tracking-widest text-xs">
           Request Full Technical Catalog
         </Button>
-      </div>
+      </div> */}
     </section>
   );
 };
