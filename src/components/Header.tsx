@@ -1,9 +1,10 @@
 import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom"; // Added useNavigate
 import { Phone, Mail, Facebook, Linkedin, Instagram, Twitter, Menu, X, ChevronDown } from "lucide-react";
 import { Button } from "./ui/button";
 import { motion, AnimatePresence } from "framer-motion";
 
-// --- DATA ARRAYS (These must be present) ---
+// --- DATA ARRAYS ---
 const navItems = [
   { name: "Home", href: "/" },
   { name: "About us", href: "/about" },
@@ -32,7 +33,6 @@ const navItems = [
       { label: "Site Visit / As-Builts", href: "/support/sitevisit" }
     ]
   },
-  // { name: "Technical", href: "#technical" },
   { name: "Contact us", href: "/contact" },
 ];
 
@@ -45,14 +45,27 @@ const socialLinks = [
 
 // --- COMPONENT ---
 export const Header = () => {
+  const navigate = useNavigate(); // Initialize navigate hook
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const [isScrolled, setIsScrolled] = useState(false);
 
-  // Detect scroll to toggle header parts
+  // Helper to handle navigation
+  const handleNavigation = (href: string) => {
+    if (href.startsWith("#")) {
+      // Handle hash/scroll navigation if needed, otherwise navigate
+      const element = document.getElementById(href.substring(1));
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    } else {
+      navigate(href);
+    }
+    setMobileMenuOpen(false); // Close mobile menu on nav
+  };
+
   useEffect(() => {
     const handleScroll = () => {
-      // If we scroll more than 50px, hide the top bar
       setIsScrolled(window.scrollY > 50);
     };
 
@@ -62,7 +75,7 @@ export const Header = () => {
 
   return (
     <header className="w-full fixed top-0 z-50 shadow-sm">
-      {/* 1. TOP BAR - Logo and Contact Info (Disappears on scroll) */}
+      {/* 1. TOP BAR */}
       <AnimatePresence>
         {!isScrolled && (
           <motion.div 
@@ -74,7 +87,10 @@ export const Header = () => {
           >
             <div className="container-main py-3">
               <div className="flex items-center justify-between">
-                <a href="#" className="flex items-center gap-4">
+                <div 
+                  onClick={() => handleNavigation("/")} 
+                  className="flex items-center gap-4 cursor-pointer"
+                >
                   <img
                     src="/images/wic-logo.png.jpeg"
                     alt="WITCO Logo"
@@ -86,7 +102,7 @@ export const Header = () => {
                       WORLD INTEGRATED TRADING & CONTRACTING COMPANY
                     </span>
                   </div>
-                </a>
+                </div>
 
                 <div className="hidden lg:flex items-center gap-8">
                   <div className="flex items-center gap-3">
@@ -114,23 +130,22 @@ export const Header = () => {
         )}
       </AnimatePresence>
 
-      {/* 2. NAVIGATION BAR - Links (Always visible) */}
+      {/* 2. NAVIGATION BAR */}
       <nav className="bg-secondary/95 backdrop-blur border-b border-secondary-foreground/10">
         <div className="container-main">
           <div className="flex items-center justify-between h-16">
             
-            {/* Small Logo that appears ONLY when scrolled */}
             <div className="flex items-center">
               {isScrolled && (
-                <motion.a 
+                <motion.div 
                   initial={{ opacity: 0, x: -10 }}
                   animate={{ opacity: 1, x: 0 }}
-                  href="#" 
-                  className="mr-6 flex items-center gap-2"
+                  onClick={() => handleNavigation("/")}
+                  className="mr-6 flex items-center gap-2 cursor-pointer"
                 >
                   <img src="/images/wic-logo.png.jpeg" className="h-8 w-auto" alt="Logo" />
                   <span className="text-primary-foreground font-bold">WITCO</span>
-                </motion.a>
+                </motion.div>
               )}
 
               {/* Desktop Nav Items */}
@@ -142,13 +157,13 @@ export const Header = () => {
                     onMouseEnter={() => item.dropdown && setActiveDropdown(item.name)}
                     onMouseLeave={() => setActiveDropdown(null)}
                   >
-                    <a
-                      href={item.href}
-                      className={`px-4 py-5 text-sm font-medium text-secondary-foreground hover:text-primary transition-colors flex items-center gap-1 ${item.name === 'Home' ? 'border-b-2 border-primary' : ''}`}
+                    <div
+                      onClick={() => handleNavigation(item.href)}
+                      className={`px-4 py-5 text-sm font-medium text-secondary-foreground hover:text-primary transition-colors flex items-center gap-1 cursor-pointer ${item.name === 'Home' ? 'border-b-2 border-primary' : ''}`}
                     >
                       {item.name}
                       {item.dropdown && <ChevronDown className="w-4 h-4" />}
-                    </a>
+                    </div>
                     
                     {item.dropdown && (
                       <AnimatePresence>
@@ -160,13 +175,13 @@ export const Header = () => {
                             className="absolute top-full left-0 bg-background shadow-lg rounded-md py-2 min-w-[220px] z-50"
                           >
                             {item.dropdown.map((subItem) => (
-                              <a
+                              <div
                                 key={subItem.label}
-                                href={subItem.href}
-                                className="block px-4 py-2 text-sm text-foreground hover:bg-primary hover:text-primary-foreground transition-colors"
+                                onClick={() => handleNavigation(subItem.href)}
+                                className="block px-4 py-2 text-sm text-foreground hover:bg-primary hover:text-primary-foreground transition-colors cursor-pointer"
                               >
                                 {subItem.label}
-                              </a>
+                              </div>
                             ))}
                           </motion.div>
                         )}
@@ -209,14 +224,27 @@ export const Header = () => {
             >
               <div className="container-main py-4 space-y-2">
                 {navItems.map((item) => (
-                  <a
-                    key={item.name}
-                    href={item.href}
-                    className="block py-2 text-secondary-foreground hover:text-primary transition-colors"
-                    onClick={() => setMobileMenuOpen(false)}
-                  >
-                    {item.name}
-                  </a>
+                  <div key={item.name}>
+                    <div
+                      className="block py-2 text-secondary-foreground hover:text-primary transition-colors cursor-pointer font-bold"
+                      onClick={() => handleNavigation(item.href)}
+                    >
+                      {item.name}
+                    </div>
+                    {item.dropdown && (
+                      <div className="pl-4 space-y-1">
+                        {item.dropdown.map((sub) => (
+                          <div
+                            key={sub.label}
+                            className="block py-1 text-sm text-secondary-foreground/70 hover:text-primary cursor-pointer"
+                            onClick={() => handleNavigation(sub.href)}
+                          >
+                            {sub.label}
+                          </div>
+                        ))}
+                      </div>
+                    )}
+                  </div>
                 ))}
               </div>
             </motion.div>
