@@ -198,7 +198,7 @@ export const ProductDetails = () => {
             </section>
 
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
-               <Button onClick={() => window.open("/contact")} className="h-16 px-10 rounded-full font-black uppercase tracking-widest text-xs flex-1">
+               <Button onClick={handleRequest} className="h-16 px-10 rounded-full font-black uppercase tracking-widest text-xs flex-1">
                   Enquire for Details
                </Button>
             </div>
