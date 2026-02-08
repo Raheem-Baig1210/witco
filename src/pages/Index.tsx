@@ -132,7 +132,7 @@ const Index = () => {
         <NewsSection />
         <PartnersSection />
       </main>
-      <Footer />
+      {/* <Footer /> */}
       <FloatingButtons />
     </div>
   );

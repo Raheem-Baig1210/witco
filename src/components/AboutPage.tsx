@@ -296,41 +296,92 @@ const AboutPage: React.FC = () => {
         </div>
       </section>
 
-      {/* SECTION: OUR LOCATIONS */}
+      {/* SECTION: OUR LOCATIONS (FIXED: EMBED URL & NO HOVER) */}
       <section id="location" className="py-24 bg-[#f8fafc] scroll-mt-40">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-[#152332] text-4xl font-black uppercase italic tracking-tighter">Global Footprint</h2>
-            <div className="h-1 w-20 bg-[#00a859] mx-auto mt-4"></div>
+          <div className="flex flex-col md:flex-row items-end justify-between mb-16 gap-4">
+            <div className="max-w-2xl">
+              <h2 className="text-[#152332] text-4xl md:text-5xl font-extrabold tracking-tight mb-4 uppercase">Our Location</h2>
+              <p className="text-gray-500 text-lg font-medium">Strategic operations center in Al Jubail Industrial City.</p>
+            </div>
+            <div className="h-1 w-24 bg-[#00a859]"></div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {/* Abu Dhabi */}
-            <div className="bg-white rounded-3xl p-8 shadow-2xl border-t-8 border-[#00a859] flex flex-col justify-between hover:-translate-y-2 transition-transform duration-300">
-              <div>
-                <span className="bg-[#152332] text-white text-[10px] font-black px-3 py-1 rounded-full uppercase tracking-widest mb-6 inline-block">Head Office</span>
-                <h3 className="text-xl font-bold text-[#152332] mb-4">Abu Dhabi, UAE</h3>
-                <p className="text-gray-500 text-sm leading-relaxed mb-6">
-                  P.O. Box : 927, Hamdan St. Crystal Tower Office 101
-                </p>
+          <div className="bg-white rounded-[2.5rem] overflow-hidden shadow-2xl border border-gray-100 flex flex-col lg:flex-row min-h-[550px]">
+            {/* LEFT SIDE: FORMAL ADDRESS DETAILS */}
+            <div className="lg:w-1/3 p-10 md:p-14 flex flex-col justify-between bg-white relative">
+              <div className="relative z-10">
+                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#00a859]/10 border border-[#00a859]/20 text-[#00a859] text-[10px] font-black uppercase tracking-widest mb-10">
+                  <MapPin size={12} /> Regional Headquarters
+                </div>
+                
+                <h3 className="text-3xl font-black text-[#152332] uppercase tracking-tight mb-8">
+                  Al Jubail, <br />
+                  <span className="text-[#00a859]">Saudi Arabia</span>
+                </h3>
+                
+                <div className="space-y-10">
+                  <div className="flex gap-5">
+                    <div className="w-12 h-12 rounded-2xl bg-gray-50 flex items-center justify-center shrink-0 border border-gray-100 shadow-sm">
+                      <Target size={20} className="text-[#00a859]" />
+                    </div>
+                    <div>
+                      <p className="text-[10px] font-black uppercase tracking-[0.2em] text-gray-400 mb-2">Primary Office</p>
+                      <p className="text-[#152332] font-bold leading-relaxed text-sm">
+                        World Integrated Services Cont. Est.<br />
+                        Ibn Hajar Al Asqalani St, Teabah District<br />
+                        Al Jubail 35513
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="flex gap-5">
+                    <div className="w-12 h-12 rounded-2xl bg-gray-50 flex items-center justify-center shrink-0 border border-gray-100 shadow-sm">
+                      <Phone size={20} className="text-[#00a859]" />
+                    </div>
+                    <div>
+                      <p className="text-[10px] font-black uppercase tracking-[0.2em] text-gray-400 mb-2">Support line</p>
+                      <p className="text-[#152332] font-bold text-lg">+966 55007 3626</p>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <div className="space-y-4 pt-6 border-t border-gray-100">
-                <a href="tel:00447832285692" className="flex items-center gap-3 text-sm font-bold text-[#152332] hover:text-[#00a859] transition-colors">
-                  <Phone size={16} className="text-[#00a859]" /> 0044 (0) 7832285692
+
+              <div className="mt-14 pt-8 border-t border-gray-100 relative z-10">
+                <a 
+                  href="https://www.google.com/maps/place/World+Integrated+Services+Cont.+Est./@26.9866493,49.6553696,17z/data=!4m6!3m5!1s0x3e35a1ab80d0ff41:0xf0c188563bb14095!8m2!3d26.9867213!4d49.6553327!16s%2Fg%2F11dftps7lw!5m2!1e4!1e1!18m1!1e1?entry=ttu&g_ep=EgoyMDI2MDIwNC4wIKXMDSoASAFQAw%3D%3D" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="group flex items-center justify-between w-full bg-[#152332] hover:bg-[#00a859] text-white p-5 rounded-2xl transition-all duration-500 shadow-xl shadow-[#152332]/20"
+                >
+                  <span className="text-[10px] font-black uppercase tracking-widest">Get Directions</span>
+                  <ExternalLink size={18} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300" />
                 </a>
-                <button className="w-full bg-[#152332] text-white py-3 rounded-xl flex items-center justify-center gap-2 hover:bg-[#00a859] transition-all font-bold text-xs uppercase tracking-widest">
-                  <MapPin size={14} /> Click to Map
-                </button>
               </div>
+            </div>
+
+            {/* RIGHT SIDE: FIXED IFRAME (EMBED FORMAT) */}
+            <div className="lg:w-2/3 h-[450px] lg:h-auto bg-gray-200 relative">
+              <iframe
+                title="World Integrated Services Location"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3566.255678326557!2d49.6262444!3d26.6402482!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e35a1ab80f0ff41%3A0xf0c188563bb14095!2sWorld%20Integrated%20Services%20Cont.%20Est.!5e0!3m2!1sen!2ssa!4v1700000000000!5m2!1sen!2ssa"
+                className="absolute inset-0 w-full h-full border-0"
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              ></iframe>
+              
+              {/* Subtle inner shadow overlay for blending */}
+              <div className="absolute inset-0 pointer-events-none border-l border-gray-100/50 shadow-[inset_20px_0_40px_-20px_rgba(0,0,0,0.05)]" />
             </div>
           </div>
         </div>
       </section>
 
       {/* FOOTER */}
-      <footer className="bg-[#152332] border-t border-white/5 py-16 text-center">
-        <p className="text-white/40 text-[10px] font-bold tracking-[0.5em] uppercase">&copy; 2026 A3S Solutions Limited | Industrial Excellence</p>
-      </footer>
+      {/* <footer className="bg-[#152332] border-t border-white/5 py-16 text-center">
+        <p className="text-white/40 text-[10px] font-bold tracking-[0.5em] uppercase">© 2026 WORLD INTEGRATED TRADING & CONTRACTING COMPANY | Industrial Excellence</p>
+      </footer> */}
     </div>
   );
 };

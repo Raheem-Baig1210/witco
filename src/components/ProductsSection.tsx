@@ -74,8 +74,8 @@ export const ProductsSection = () => {
           <span className="section-kicker mb-3 inline-flex uppercase tracking-[0.3em] text-primary font-bold text-xs">
             Product Portfolio
           </span>
-          <h2 className="text-4xl md:text-5xl font-black text-secondary mb-4 uppercase tracking-tighter">
-            Solutions Built for Critical Power
+          <h2 className="text-4xl md:text-5xl font-black text-secondary mb-4 uppercase ">
+            OUR PRODUCTS  
           </h2>
           <div className="w-24 h-1.5 bg-primary mx-auto" />
           <p className="mt-6 text-muted-foreground max-w-2xl mx-auto font-medium">

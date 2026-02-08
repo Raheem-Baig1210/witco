@@ -17,10 +17,10 @@ export const ContactUs = () => {
     setLoading(true);
 
     // FIX: Paste your verified keys here
-    const SERVICE_ID = "your_service_id"; 
-    const TEMPLATE_ID_ADMIN = "your_admin_template_id"; // Template for your email
-    const TEMPLATE_ID_USER_AUTO_REPLY = "your_user_auto_reply_template_id"; // Template for user's email
-    const PUBLIC_KEY = "your_public_key"; 
+    const SERVICE_ID = "service_rchj5bn"; 
+    const TEMPLATE_ID_ADMIN = "template_aw7zbrr"; // Template for your email
+    const TEMPLATE_ID_USER_AUTO_REPLY = "template_r0uzk9h"; // Template for user's email
+    const PUBLIC_KEY = "FM-qK7U62V91EFV41"; 
 
     if (formRef.current) {
       // 1. Send to Admin
@@ -130,7 +130,7 @@ export const ContactUs = () => {
               </div>
             </div>
 
-            <div className="rounded-[2.5rem] overflow-hidden border border-border shadow-2xl grayscale hover:grayscale-0 transition-all duration-700">
+            <div className="rounded-[2.5rem] overflow-hidden border border-border shadow-2xl   transition-all duration-700">
               <img 
                 src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&q=80&w=800" 
                 alt="Engineering Team" 

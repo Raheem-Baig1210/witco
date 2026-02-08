@@ -81,7 +81,7 @@ export const HeroCarousel = () => {
             style={{ backgroundImage: `url(${slides[currentSlide].image})` }}
           >
             {/* Dark Gradient Overlay */}
-            <div className="absolute inset-0 bg-gradient-to-br from-secondary/90 via-secondary/70 to-secondary/30" />
+            {/* <div className="absolute inset-0 bg-gradient-to-br from-secondary/90 via-secondary/70 to-secondary/30" /> */}
           </motion.div>
         </motion.div>
       </AnimatePresence>
@@ -96,7 +96,7 @@ export const HeroCarousel = () => {
             transition={{ duration: 0.6, delay: 0.3 }}
             className="max-w-2xl text-left z-10"
           >
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-display italic text-primary-foreground mb-4 text-balance">
+            <h1 className="text-4xl font-semibold md:text-6xl lg:text-7xl font-display italic text-primary-foreground mb-4 text-balance">
               {slides[currentSlide].title}
             </h1>
             <p className="text-primary-foreground/80 text-sm md:text-base mb-8 max-w-xl text-balance">

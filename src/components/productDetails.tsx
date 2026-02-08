@@ -2,6 +2,7 @@ import { useParams, Link } from "react-router-dom";
 import { ArrowLeft, CheckCircle2, Zap, ShieldCheck, Cog, Download } from "lucide-react";
 import { Button } from "./ui/button";
 import { useNavigate } from "react-router-dom";
+
 // --- TYPES ---
 interface ProductInfo {
   title: string;
@@ -83,19 +84,12 @@ const productDetailsData: Record<string, ProductInfo> = {
 export const ProductDetails = () => {
   const { id } = useParams<{ id: string }>();
   const product = id ? productDetailsData[id] : null;
-
-  const navigate = useNavigate(); // Initialize navigate
+  const navigate = useNavigate();
 
   const handleRequest = () => {
-    // We pass the service title in the 'state' object
     navigate('/contact');
   };
 
-  if (!product) {
-    // ... return error state ...
-  }
-
-  // Error handling if product ID is invalid
   if (!product) {
     return (
       <div className="min-h-screen flex flex-col items-center justify-center py-40">
@@ -129,15 +123,14 @@ export const ProductDetails = () => {
             </Button>
           </div>
         </div>
-        {/* Background Decorative Element */}
         <div className="absolute top-0 right-0 w-1/3 h-full bg-primary/5 -skew-x-12 translate-x-1/2" />
       </div>
 
       <div className="container-main py-20">
         <div className="grid lg:grid-cols-2 gap-16 items-start">
           
-          {/* PRODUCT IMAGE CARDS */}
-          <div className="sticky top-32">
+          {/* PRODUCT IMAGE CARDS - FIXED FOR RESPONSIVENESS */}
+          <div className="lg:sticky lg:top-32">
             <div className="relative group">
               <div className="absolute -inset-4 bg-primary/5 rounded-[3rem] blur-2xl group-hover:bg-primary/10 transition-all duration-700" />
               <div className="relative rounded-[2.5rem] overflow-hidden border border-border bg-card shadow-2xl">
@@ -149,7 +142,6 @@ export const ProductDetails = () => {
               </div>
             </div>
             
-            {/* Quick Specs Callout */}
             <div className="mt-10 grid grid-cols-2 gap-4">
                <div className="p-6 bg-muted/40 rounded-3xl border border-border flex flex-col gap-2">
                   <Cog className="text-primary" size={24} />
@@ -209,9 +201,6 @@ export const ProductDetails = () => {
                <Button onClick={() => window.open("/contact")} className="h-16 px-10 rounded-full font-black uppercase tracking-widest text-xs flex-1">
                   Enquire for Details
                </Button>
-               {/* <Button variant="outline" className="h-16 px-10 rounded-full font-black uppercase tracking-widest text-xs flex-1 gap-2">
-                  <Download size={18} /> Download Datasheet
-               </Button> */}
             </div>
           </div>
         </div>
