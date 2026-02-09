@@ -71,9 +71,9 @@ export const ProductsSection = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <span className="section-kicker mb-3 inline-flex uppercase tracking-[0.3em] text-primary font-bold text-xs">
+          {/* <span className="section-kicker mb-3 inline-flex uppercase tracking-[0.3em] text-primary font-bold text-xs">
             Product Portfolio
-          </span>
+          </span> */}
           <h2 className="text-4xl md:text-5xl font-black text-secondary mb-4 uppercase ">
             OUR PRODUCTS  
           </h2>

@@ -100,8 +100,8 @@ export const ContactUs = () => {
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary text-[10px] uppercase tracking-widest">
                 <Sparkles size={12} /> Global Support
               </div>
-              <h2 className="text-5xl md:text-7xl font-semibold uppercase italic tracking-tight text-secondary leading-[0.9]">
-                Request a <br /> <span className="text-primary">Consultation</span>
+              <h2 className="text-5xl md:text-7xl font-semibold uppercase tracking-tight text-secondary leading-[0.9]">
+                Request a <br /> <span className="">Consultation</span>
               </h2>
               <p className="text-muted-foreground text-lg max-w-md font-normal leading-relaxed">
                 Connect with our certified engineers to discuss bespoke power systems and technical specifications for your next project.
@@ -114,7 +114,7 @@ export const ContactUs = () => {
                   <Phone size={24} />
                 </div>
                 <div>
-                  <h4 className="text-[10px] uppercase tracking-[0.2em] text-primary mb-1">Direct Line</h4>
+                  <h4 className="text-[10px] uppercase tracking-[0.2em]  mb-1">Direct Line</h4>
                   <p className="text-xl font-medium tracking-tight">0044 (0) 7832285692</p>
                 </div>
               </div>
@@ -125,7 +125,7 @@ export const ContactUs = () => {
                 </div>
                 <div>
                   <h4 className="text-[10px] uppercase tracking-[0.2em] text-secondary mb-1">Corporate Email</h4>
-                  <p className="text-xl font-medium tracking-tight">inayath.khan@witco.com</p>
+                  <p className="text-xl font-medium tracking-tight"><a href="mailto:manager@witco.com">manager@witco.com</a></p>
                 </div>
               </div>
             </div>

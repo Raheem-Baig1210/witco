@@ -116,23 +116,6 @@ const AboutPage: React.FC = () => {
           </div>
         </div>
 
-        <div className="mt-32 bg-[#152332] rounded-[2.5rem] p-12 md:p-16 text-white overflow-hidden relative shadow-2xl">
-          <div className="absolute top-0 right-0 w-64 h-64 bg-[#00a859] opacity-10 rounded-full -mr-32 -mt-32"></div>
-          <h3 className="text-2xl font-bold text-center mb-12 relative z-10 uppercase tracking-[0.3em] text-[#00a859]">Core Value Delivery</h3>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 relative z-10">
-            {[
-              { icon: Zap, label: "Responsiveness" },
-              { icon: Repeat, label: "Flexibility" },
-              { icon: Award, label: "Quality" },
-              { icon: Target, label: "Efficiency" }
-            ].map((value) => (
-              <div key={value.label} className="bg-white/5 backdrop-blur-sm border border-white/10 p-10 rounded-2xl flex flex-col items-center hover:bg-[#00a859]/20 transition-all duration-500 group">
-                <value.icon className="w-12 h-12 text-[#00a859] mb-4 group-hover:scale-110 transition-transform" />
-                <span className="text-xs font-black tracking-widest uppercase">{value.label}</span>
-              </div>
-            ))}
-          </div>
-        </div>
       </section>
 
       {/* SECTION: COMPANY PROFILE */}
@@ -172,7 +155,7 @@ const AboutPage: React.FC = () => {
       {/* SECTION: HISTORY */}
       <section id="history" className="py-24 max-w-7xl mx-auto px-6 scroll-mt-40">
         <div className="text-center mb-20">
-          <h2 className="text-[#152332] text-4xl font-black uppercase tracking-tighter italic">Corporate Evolution</h2>
+          <h2 className="text-[#152332] text-4xl font-black uppercase ">Corporate Evolution</h2>
           <div className="h-1.5 w-24 bg-[#00a859] mx-auto mt-4"></div>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
@@ -185,7 +168,7 @@ const AboutPage: React.FC = () => {
             { year: "2018", title: "Global Growth", desc: "Expanded footprint into India and Saudi Arabia." }
           ].map((card, i) => (
             <div key={i} className="group p-10 bg-white border-b-[10px] border-[#152332] shadow-xl hover:border-[#00a859] transition-all duration-300 transform hover:-translate-y-2">
-              <span className="text-[#00a859] font-black text-4xl italic">{card.year}</span>
+              <span className="text-[#00a859] font-black text-4xl ">{card.year}</span>
               <h4 className="text-[#152332] text-xl font-bold mt-2 uppercase tracking-tight">{card.title}</h4>
               <p className="text-gray-500 mt-6 text-sm leading-relaxed">{card.desc}</p>
             </div>
@@ -236,8 +219,8 @@ const AboutPage: React.FC = () => {
                 <h3 className="text-3xl font-black uppercase tracking-tight">M. Inayath Khan</h3>
                 <p className="text-[#00a859] font-bold tracking-[0.2em] uppercase text-xs mb-4">Director of A3S Solutions Limited</p>
                 <div className="flex flex-wrap justify-center md:justify-start gap-6 text-sm">
-                  <a href="tel:00447832285692" className="flex items-center gap-2 hover:text-[#00a859] transition-colors"><Phone size={16}/> 0044 (0) 78322 85692</a>
-                  <a href="mailto:inayath.khan@a3ssolution.com" className="flex items-center gap-2 hover:text-[#00a859] transition-colors"><Mail size={16}/> inayath.khan@a3ssolution.com</a>
+                  <a href="tel:00966504989405" className="flex items-center gap-2 hover:text-[#00a859] transition-colors"><Phone size={16}/> 00966 50 498 9405</a>
+                  <a href="mailto:manager@wis-ksa.com" className="flex items-center gap-2 hover:text-[#00a859] transition-colors"><Mail size={16}/> manager@wis-ksa.com</a>
                 </div>
               </div>
             </div>
@@ -287,7 +270,7 @@ const AboutPage: React.FC = () => {
                   <div key={member.name} className="border border-gray-100 p-5 rounded-xl bg-white shadow-sm hover:shadow-md transition-shadow">
                     <p className="font-bold text-[#152332] text-xs uppercase">{member.name}</p>
                     {member.tel && <p className="text-[10px] text-gray-500 mt-1 font-medium">{member.tel}</p>}
-                    <p className="text-[10px] text-[#00a859] mt-1 break-all">{member.mail}</p>
+                    <p className="text-[10px]  mt-1 break-all">{member.mail}</p>
                   </div>
                 ))}
               </div>

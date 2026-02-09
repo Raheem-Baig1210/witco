@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom"; // Added useNavigate
+import { useNavigate } from "react-router-dom";
 import { Phone, Mail, Facebook, Linkedin, Instagram, Twitter, Menu, X, ChevronDown } from "lucide-react";
 import { Button } from "./ui/button";
 import { motion, AnimatePresence } from "framer-motion";
@@ -19,7 +19,8 @@ const navItems = [
       { label: "Solar Power System", href: "/product/solar" },
       { label: "Chargers/Rectifiers", href: "/product/chargers" },
       { label: "UPS Systems", href: "/product/ups" },
-      { label: "Invertors", href: "/product/invertors" }
+      { label: "Invertors", href: "/product/invertors" },
+      { label: "Link to other Site", href: "https://jardengineers.com/" }, // Re-enabled and updated
     ]
   },
   { 
@@ -45,15 +46,17 @@ const socialLinks = [
 
 // --- COMPONENT ---
 export const Header = () => {
-  const navigate = useNavigate(); // Initialize navigate hook
+  const navigate = useNavigate();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const [isScrolled, setIsScrolled] = useState(false);
 
   // Helper to handle navigation
   const handleNavigation = (href: string) => {
-    if (href.startsWith("#")) {
-      // Handle hash/scroll navigation if needed, otherwise navigate
+    if (href.startsWith("http")) {
+      // Handle external links to open in a new tab
+      window.open(href, "_blank", "noopener,noreferrer");
+    } else if (href.startsWith("#")) {
       const element = document.getElementById(href.substring(1));
       if (element) {
         element.scrollIntoView({ behavior: "smooth" });
@@ -61,7 +64,7 @@ export const Header = () => {
     } else {
       navigate(href);
     }
-    setMobileMenuOpen(false); // Close mobile menu on nav
+    setMobileMenuOpen(false);
   };
 
   useEffect(() => {
@@ -98,7 +101,7 @@ export const Header = () => {
                   />
                   <div className="flex flex-col">
                     <span className="text-xl font-bold text-secondary">WITCO</span>
-                    <span className="text-[10px] text-primary font-medium tracking-wider uppercase">
+                    <span className="text-[15px]  font-medium tracking-wider uppercase">
                       WORLD INTEGRATED TRADING & CONTRACTING COMPANY
                     </span>
                   </div>
@@ -110,7 +113,7 @@ export const Header = () => {
                       <Phone className="w-5 h-5 text-primary" />
                     </div>
                     <div>
-                      <p className="text-sm font-semibold text-foreground">0044 (0) 7832285692</p>
+                      <p className="text-sm font-semibold text-foreground">00966 50 498 9405</p>
                       <p className="text-xs text-primary">Mobile</p>
                     </div>
                   </div>
@@ -119,7 +122,7 @@ export const Header = () => {
                       <Mail className="w-5 h-5 text-primary" />
                     </div>
                     <div>
-                      <p className="text-sm font-semibold text-foreground">inayath.khan@witco.com</p>
+                      <p className="text-sm font-semibold text-foreground">manager@wis-ksa.com</p>
                       <p className="text-xs text-primary">Email</p>
                     </div>
                   </div>

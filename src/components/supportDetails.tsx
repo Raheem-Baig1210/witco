@@ -115,7 +115,7 @@ const supportData: Record<string, SupportInfo> = {
                 <h1 className="text-4xl md:text-6xl font-semibold tracking-tighter text-secondary mb-4 leading-none">
                     {service.title}
                 </h1>
-                <p className="text-xl text-muted-foreground font-medium italic">{service.tagline}</p>
+                <p className="text-xl text-muted-foreground font-medium ">{service.tagline}</p>
                 </div>
 
                 <p className="text-lg leading-relaxed text-muted-foreground font-normal">

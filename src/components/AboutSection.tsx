@@ -46,9 +46,6 @@ export const AboutSection = () => {
             <h2 className="section-title mb-4">
               Al-Mutakamilah Al-Alamiyyah Al-maqawalat Al-ammah (World Integrated  Trading & Contracting Co.) WITCO.
             </h2>
-            <h1 className="section-kicker  italic mb-6">
-              ( Formally Known As Shore Waves Trading LLC )
-            </h1>
             <p className="text-foreground/80 leading-relaxed mb-8">
               World Integrated Trading &amp; Contracting Co. (WITCO) Limited is a progressive and efficient trading and contracting company.
               With a solid reputation, quality products are delivered on time with consistent, dependable service.

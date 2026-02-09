@@ -114,7 +114,7 @@ export const ProductDetails = () => {
               <span className="text-primary font-black uppercase tracking-[0.3em] text-xs mb-3 block">
                 {product.category}
               </span>
-              <h1 className="text-4xl md:text-6xl font-black uppercase italic tracking-tighter">
+              <h1 className="text-4xl md:text-6xl font-black uppercase  tracking-tighter">
                 {product.title}
               </h1>
             </div>
@@ -162,7 +162,7 @@ export const ProductDetails = () => {
               <h2 className="text-2xl font-black uppercase tracking-tight mb-6 flex items-center gap-3">
                 <Zap className="text-primary" fill="currentColor" /> Detailed Overview
               </h2>
-              <p className="text-muted-foreground text-lg leading-relaxed font-medium italic">
+              <p className="text-muted-foreground text-lg leading-relaxed font-medium">
                 {product.fullDescription}
               </p>
             </section>
@@ -189,7 +189,7 @@ export const ProductDetails = () => {
                     <p className="text-[10px] uppercase tracking-[0.2em] font-black text-primary mb-1">
                       {key}
                     </p>
-                    <p className="text-xl font-bold tracking-tight">
+                    <p className="text-xl  tracking-tight">
                       {String(value)}
                     </p>
                   </div>

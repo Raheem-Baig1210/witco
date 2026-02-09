@@ -73,10 +73,10 @@ export const Footer = () => {
                 <div className="p-2 bg-white/5 rounded-lg group-hover:bg-primary/20">
                     <Mail className="w-5 h-5" />
                 </div>
-                <span className="font-medium truncate">inayath.khan@WITCO.com</span>
+                <span className="font-medium truncate">manager@wis-ksa.com</span>
               </a>
               <a 
-                href="https://api.whatsapp.com/send?phone=00971526111172" 
+                href="https://api.whatsapp.com/send?phone=00966504989405" 
                 target="_blank" 
                 className="flex items-center justify-between w-full bg-primary p-4 rounded-xl text-white font-bold group overflow-hidden relative"
               >
@@ -95,11 +95,6 @@ export const Footer = () => {
           <p className="text-slate-500 text-xs tracking-wide">
             © {currentYear} <span className="text-slate-300 font-semibold">WITCO LIMITED</span>. ENGINEERED FOR SUCCESS.
           </p>
-          <div className="flex gap-8 text-[10px] font-bold text-slate-500 tracking-[0.2em] uppercase">
-            <a href="#" className="hover:text-primary transition-colors">Privacy Policy</a>
-            <a href="#" className="hover:text-primary transition-colors">Terms of Service</a>
-            <a href="#" className="hover:text-primary transition-colors">Sitemap</a>
-          </div>
         </div>
       </div>
     </footer>

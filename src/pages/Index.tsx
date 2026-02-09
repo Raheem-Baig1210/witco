@@ -6,7 +6,6 @@ import { ExperienceSection } from "@/components/ExperienceSection";
 import { ProductsSection } from "@/components/ProductsSection";
 import { ISOSection } from "@/components/ISOSection";
 import { SolarSection } from "@/components/SolarSection";
-import { NewsSection } from "@/components/NewsSection";
 import { PartnersSection } from "@/components/PartnersSection";
 import { Footer } from "@/components/Footer";
 import { FloatingButtons } from "@/components/FloatingButtons";
@@ -129,7 +128,7 @@ const Index = () => {
         </section>
         <ISOSection />
         <SolarSection />
-        <NewsSection />
+        {/* <NewsSection /> */}
         <PartnersSection />
       </main>
       {/* <Footer /> */}
