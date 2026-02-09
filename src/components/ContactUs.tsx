@@ -115,7 +115,7 @@ export const ContactUs = () => {
                 </div>
                 <div>
                   <h4 className="text-[10px] uppercase tracking-[0.2em]  mb-1">Direct Line</h4>
-                  <p className="text-xl font-medium tracking-tight">0044 (0) 7832285692</p>
+                  <p className="text-xl font-medium tracking-tight">00966 50 498 9405</p>
                 </div>
               </div>
 
@@ -125,7 +125,7 @@ export const ContactUs = () => {
                 </div>
                 <div>
                   <h4 className="text-[10px] uppercase tracking-[0.2em] text-secondary mb-1">Corporate Email</h4>
-                  <p className="text-xl font-medium tracking-tight"><a href="mailto:manager@witco.com">manager@witco.com</a></p>
+                  <p className="text-xl font-medium tracking-tight"><a href="mailto:manager@wis-ksa.com">manager@wis-ksa.com</a></p>
                 </div>
               </div>
             </div>

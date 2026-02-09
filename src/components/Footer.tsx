@@ -69,7 +69,7 @@ export const Footer = () => {
           <div className="space-y-6">
             <h3 className="text-white font-bold uppercase tracking-widest text-sm border-l-2 border-primary pl-4">Digital Hub</h3>
             <div className="space-y-4">
-              <a href="mailto:inayath.khan@WITCO.com" className="flex items-center gap-3 text-slate-300 hover:text-primary transition-colors group">
+              <a href="mailto:manager@wis-ksa.com" className="flex items-center gap-3 text-slate-300 hover:text-primary transition-colors group">
                 <div className="p-2 bg-white/5 rounded-lg group-hover:bg-primary/20">
                     <Mail className="w-5 h-5" />
                 </div>

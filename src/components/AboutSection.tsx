@@ -42,7 +42,7 @@ export const AboutSection = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <span className="section-kicker mb-4 inline-flex">About WITCO</span>
+            <span className="section-kicker text-secondary mb-4 inline-flex">About WITCO</span>
             <h2 className="section-title mb-4">
               Al-Mutakamilah Al-Alamiyyah Al-maqawalat Al-ammah (World Integrated  Trading & Contracting Co.) WITCO.
             </h2>

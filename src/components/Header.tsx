@@ -20,7 +20,7 @@ const navItems = [
       { label: "Chargers/Rectifiers", href: "/product/chargers" },
       { label: "UPS Systems", href: "/product/ups" },
       { label: "Invertors", href: "/product/invertors" },
-      { label: "Link to other Site", href: "https://jardengineers.com/" }, // Re-enabled and updated
+      { label: "Industrial & Engineering", href: "https://jardengineers.com/" },
     ]
   },
   { 
@@ -35,6 +35,7 @@ const navItems = [
     ]
   },
   { name: "Contact us", href: "/contact" },
+  { name: "Download", href: "/Company Profile WIS.pdf (1).pdf" }, // Added Download Item
 ];
 
 const socialLinks = [
@@ -53,8 +54,8 @@ export const Header = () => {
 
   // Helper to handle navigation
   const handleNavigation = (href: string) => {
-    if (href.startsWith("http")) {
-      // Handle external links to open in a new tab
+    if (href.startsWith("http") || href.endsWith(".pdf")) {
+      // Handle external links and PDF files to open in a new tab
       window.open(href, "_blank", "noopener,noreferrer");
     } else if (href.startsWith("#")) {
       const element = document.getElementById(href.substring(1));
@@ -100,7 +101,7 @@ export const Header = () => {
                     className="h-16 w-auto"
                   />
                   <div className="flex flex-col">
-                    <span className="text-xl font-bold text-secondary">WITCO</span>
+                    <span className="text-4xl font-bold text-secondary">WITCO</span>
                     <span className="text-[15px]  font-medium tracking-wider uppercase">
                       WORLD INTEGRATED TRADING & CONTRACTING COMPANY
                     </span>
@@ -122,7 +123,9 @@ export const Header = () => {
                       <Mail className="w-5 h-5 text-primary" />
                     </div>
                     <div>
-                      <p className="text-sm font-semibold text-foreground">manager@wis-ksa.com</p>
+                      <a href="mailto:manager@wis-ksa.com" className="text-sm font-semibold text-foreground hover:text-primary transition-colors">
+                        manager@wis-ksa.com
+                      </a>
                       <p className="text-xs text-primary">Email</p>
                     </div>
                   </div>

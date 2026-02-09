@@ -33,9 +33,9 @@ export const ExperienceSection = () => {
                 <p className="text-sm text-primary-foreground/80">HSE-led project delivery</p>
               </div>
             </div>
-            <Button variant="hero" size="lg">
+            {/* <Button variant="hero" size="lg">
               Company Profile
-            </Button>
+            </Button> */}
           </motion.div>
 
           <motion.div
