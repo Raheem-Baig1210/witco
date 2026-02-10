@@ -44,16 +44,16 @@ export const Footer = () => {
           <div className="space-y-6">
             <h3 className="text-white font-bold uppercase tracking-widest text-sm border-l-2 border-primary pl-4">Direct Lines</h3>
             <div className="space-y-4">
-              <a href="tel:00971526111172" className="flex items-center gap-3 text-slate-300 hover:text-primary transition-colors group">
+              <a href="tel:00966504989405" className="flex items-center gap-3 text-slate-300 hover:text-primary transition-colors group">
                 <div className="p-2 bg-white/5 rounded-lg group-hover:bg-primary/20">
                     <Phone className="w-5 h-5" />
                 </div>
                 <div className="flex flex-col">
-                    <span className="text-xs text-slate-500 font-medium">UAE Support</span>
-                    <span className="font-semibold tracking-wide">00971 526111172</span>
+                    <span className="text-xs text-slate-500 font-medium">KSA Support</span>
+                    <span className="font-semibold tracking-wide">00966 50 498 9405</span>
                 </div>
               </a>
-              <a href="tel:00447832285692" className="flex items-center gap-3 text-slate-300 hover:text-primary transition-colors group">
+              {/* <a href="tel:00447832285692" className="flex items-center gap-3 text-slate-300 hover:text-primary transition-colors group">
                 <div className="p-2 bg-white/5 rounded-lg group-hover:bg-primary/20">
                     <Globe className="w-5 h-5" />
                 </div>
@@ -61,7 +61,7 @@ export const Footer = () => {
                     <span className="text-xs text-slate-500 font-medium">UK Operations</span>
                     <span className="font-semibold tracking-wide">0044 (0) 7832285692</span>
                 </div>
-              </a>
+              </a> */}
             </div>
           </div>
 

@@ -149,7 +149,7 @@ export const Header = () => {
                   onClick={() => handleNavigation("/")}
                   className="mr-6 flex items-center gap-2 cursor-pointer"
                 >
-                  <img src="/images/wic-logo.png.jpeg" className="h-8 w-auto" alt="Logo" />
+                  <img src="/images/wic-logo.png.jpeg" className="h-12 w-auto" alt="Logo" />
                   <span className="text-primary-foreground font-bold">WITCO</span>
                 </motion.div>
               )}

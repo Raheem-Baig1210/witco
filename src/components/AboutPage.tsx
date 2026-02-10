@@ -92,13 +92,13 @@ const AboutPage: React.FC = () => {
               </ul>
             </div>
             <div className="order-1 md:order-2 overflow-hidden rounded-2xl shadow-2xl border-b-8 border-[#00a859]">
-              <img src="/images/1.png" alt="Oil & Gas" className="w-full aspect-video object-cover transition-transform duration-700 group-hover:scale-110" />
+              <img src="/images/1.jpeg" alt="Oil & Gas" className="w-full aspect-video object-cover transition-transform duration-700 group-hover:scale-110" />
             </div>
           </div>
 
           <div className="group grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div className="overflow-hidden rounded-2xl shadow-2xl border-b-8 border-[#00a859]">
-              <img src="/images/2.png" alt="Utilities" className="w-full aspect-video object-cover transition-transform duration-700 group-hover:scale-110" />
+              <img src="/images/2.jpeg" alt="Utilities" className="w-full aspect-video object-cover transition-transform duration-700 group-hover:scale-110" />
             </div>
             <div className="md:pl-12">
               <div className="flex items-center gap-3 mb-6">
@@ -131,7 +131,7 @@ const AboutPage: React.FC = () => {
               <div className="h-1.5 w-20 bg-[#00a859]"></div>
               <div className="text-gray-600 leading-relaxed text-lg space-y-6">
                 <p className="font-bold text-[#152332] text-xl">Powering Industry Since 2010.</p>
-                <p>A3S Solutions evolved from a trading firm into a premier staging facility and distribution leader. We specialize in industrial AC & DC systems, ensuring reliability in the most extreme environments.</p>
+                <p>Witco evolved from a trading firm into a premier staging facility and distribution leader. We specialize in industrial AC & DC systems, ensuring reliability in the most extreme environments.</p>
               </div>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-y-4 gap-x-8">
                 {[
@@ -216,8 +216,22 @@ const AboutPage: React.FC = () => {
                 <UserCircle size={56} className="text-white" />
               </div>
               <div className="text-center md:text-left">
+                <h3 className="text-3xl font-black uppercase tracking-tight">Marshad Mohammed Bin Marshad Aloqily</h3>
+                <p className="text-[#00a859] font-bold tracking-[0.2em] uppercase text-xs mb-4">Owner</p>
+                <div className="flex flex-wrap justify-center md:justify-start gap-6 text-sm">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="bg-[#152332] rounded-[2.5rem] p-8 md:p-12 text-white shadow-2xl relative overflow-hidden group">
+            <div className="absolute top-0 right-0 w-32 h-32 bg-[#00a859] opacity-20 rounded-bl-full transition-all group-hover:w-40 group-hover:h-40"></div>
+            <div className="flex flex-col md:flex-row gap-8 items-center relative z-10">
+              <div className="w-24 h-24 bg-[#00a859] rounded-full flex items-center justify-center shrink-0">
+                <UserCircle size={56} className="text-white" />
+              </div>
+              <div className="text-center md:text-left">
                 <h3 className="text-3xl font-black uppercase tracking-tight">M. Inayath Khan</h3>
-                <p className="text-[#00a859] font-bold tracking-[0.2em] uppercase text-xs mb-4">Director of A3S Solutions Limited</p>
+                <p className="text-[#00a859] font-bold tracking-[0.2em] uppercase text-xs mb-4">General Manager</p>
                 <div className="flex flex-wrap justify-center md:justify-start gap-6 text-sm">
                   <a href="tel:00966504989405" className="flex items-center gap-2 hover:text-[#00a859] transition-colors"><Phone size={16}/> 00966 50 498 9405</a>
                   <a href="mailto:manager@wis-ksa.com" className="flex items-center gap-2 hover:text-[#00a859] transition-colors"><Mail size={16}/> manager@wis-ksa.com</a>
@@ -225,6 +239,7 @@ const AboutPage: React.FC = () => {
               </div>
             </div>
           </div>
+          
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {/* Sales Team */}
@@ -244,10 +259,10 @@ const AboutPage: React.FC = () => {
               <h4 className="text-xs font-black uppercase tracking-[0.3em] text-[#00a859] border-b border-gray-100 pb-2">Project & Execution</h4>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 {[
-                  { name: "Aamer Khan", tel: "+966 55007 3626", mail: "aamer.khan@a3ssolution.com" },
-                  { name: "Mohammed Waseem Khan", tel: "+966 532207019", mail: "logistics@a3ssolution.com" },
+                  // { name: "Aamer Khan", tel: "+966 55007 3626", mail: "aamer.khan@a3ssolution.com" },
+                  // { name: "Mohammed Waseem Khan", tel: "+966 532207019", mail: "logistics@a3ssolution.com" },
                   { name: "Afroz Samee", tel: "+966 565404787", mail: "afroz.samee@a3ssolution.com" },
-                  { name: "Syed Faisal", tel: "+966 532 789 427", mail: "services@a3ssolution.com" }
+                  // { name: "Syed Faisal", tel: "+966 532 789 427", mail: "services@a3ssolution.com" }
                 ].map((member) => (
                   <div key={member.name} className="bg-gray-50 p-5 rounded-xl hover:bg-white hover:shadow-lg transition-all group border border-transparent hover:border-gray-100">
                     <p className="font-bold text-[#152332] text-xs uppercase group-hover:text-[#00a859]">{member.name}</p>
@@ -259,7 +274,7 @@ const AboutPage: React.FC = () => {
             </div>
 
             {/* Service Team */}
-            <div className="space-y-6 lg:col-span-3 mt-4">
+            {/* <div className="space-y-6 lg:col-span-3 mt-4">
               <h4 className="text-xs font-black uppercase tracking-[0.3em] text-[#00a859] border-b border-gray-100 pb-2">Service Team</h4>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                 {[
@@ -274,7 +289,7 @@ const AboutPage: React.FC = () => {
                   </div>
                 ))}
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </section>
